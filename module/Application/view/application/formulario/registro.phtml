@@ -1,0 +1,41 @@
+<?php
+$form = $this->form;
+$form->prepare();
+
+$form->setAttributes(array(
+    'action' => $this->url.'/application/formulario/registro',
+    'method' => 'post'
+));
+$formLabel = $this->plugin('formLabel');
+echo $this->form()->openTag($form);
+?>
+<?php 
+
+    echo $this->formLabel($form->get('nombre')). PHP_EOL;
+    echo $this->formInput($form->get('nombre')). PHP_EOL;   
+
+    echo $this->formLabel($form->get('edad')). PHP_EOL;
+    echo $this->formInput($form->get('edad')). PHP_EOL;  
+
+    echo $this->formLabel($form->get('estado')). PHP_EOL;
+    echo $this->formInput($form->get('estado')). PHP_EOL;  
+
+    echo $this->formLabel($form->get('fecha')). PHP_EOL;
+    echo $this->formInput($form->get('fecha')). PHP_EOL;  
+
+    echo $this->formLabel($form->get('pass')). PHP_EOL;
+    echo $this->formInput($form->get('pass')). PHP_EOL;  
+
+    echo $this->formLabel($form->get('user')). PHP_EOL;
+    echo $this->formInput($form->get('user')). PHP_EOL; 
+
+    echo $this->formLabel($form->get('email')). PHP_EOL;
+    echo $this->formInput($form->get('email')). PHP_EOL; 
+
+    echo '<br>';
+    echo $this->formInput($form->get('send')). PHP_EOL;
+
+echo $this->form()->closeTag($form) . PHP_EOL;
+
+?>
+
